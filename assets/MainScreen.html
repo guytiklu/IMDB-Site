@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="MainScreen.js" type="text/javascript"></script>
+  </head>
+
+  <body onload="init()">
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-grid-container" id="modal-grid">
+          <span class="close">&times;</span>
+          <img class="modal-pic" id='modal-img'/>
+          <div class="modal-data">
+            </br><p id="modal-movie-name" class="p-modal-moviename">Name</p></br></br>
+            <p id="modal-movie-desc">Desc</p></br></br>
+            <p id="modal-movie-genres" class="p-modal">Genres</p></br>
+            <p id="modal-movie-release" class="p-modal">Release</p></br>
+            <p id="modal-movie-actors" class="p-modal">Actors</p></br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="searchBar">
+      <div class="search-pos">
+        <label for="search" class="search-style">Search:</label>
+        <input type="text" id="search" name="search" class="input-style"/>
+        <label class="search-style-x" onclick="returnToMain()">X</label>
+      </div>
+    </div>
+
+    <div class="top10Div">
+      <p class="headP" id="headText">Today's Top 10:</p>
+      <div class="grid-container" id="top10Grid"></div>
+    </div>
+  </body>
+</html>

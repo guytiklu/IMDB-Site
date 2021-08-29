@@ -1,0 +1,150 @@
+:root {
+  --searchBarHeight: 40px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+  background-color: lightblue;
+}
+
+p {
+  margin: 0px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.movieBlockP {
+  height: 40px;
+  font-size: 16px;
+  vertical-align: bottom;
+}
+
+.headP {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.top10Div {
+  margin-top: 10px;
+  height: calc(100% - var(--searchBarHeight) - 10px);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgb(111, 168, 187);
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+  margin-top: 10px;
+  text-align: center;
+  height: 360px;
+}
+
+.grid-item:hover {
+  background-color: rgb(49, 148, 155);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  border-radius: 20px;
+}
+/* Modal Content */
+.modal-content {
+  margin: auto;
+  padding: 0px;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  grid-area: x;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-grid-container {
+  display: grid;
+  grid-template-areas: "pic data x";
+  grid-template-columns: 350px calc(100% - 370px) 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.modal-pic {
+  grid-area: pic;
+}
+.modal-data {
+  grid-area: data;
+}
+.modal-x {
+  grid-area: x;
+  width: 10px;
+}
+.p-modal-moviename {
+  font-size: 20px;
+}
+.p-modal {
+  text-align: left;
+}
+
+.searchBar {
+  height: var(--searchBarHeight);
+  background-color: black;
+  display: flex;
+  align-content: center;
+  text-align: center;
+}
+
+.search-style {
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+.search-style-x {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.search-style-x:hover {
+  border: 2px solid red;
+}
+
+.input-style {
+  border-radius: 10px;
+  width: 230px;
+  height: 22px;
+}
+
+.search-pos {
+  margin-top: 5px;
+  margin-left: 10px;
+}
